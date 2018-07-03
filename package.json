@@ -32,14 +32,17 @@
     "node": ">= 0.12"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --timeout 5000 --reporter spec --ui tdd test/*"
+    "test": "./node_modules/.bin/mocha --timeout 5000 --reporter spec --ui tdd test/*",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "midware": "^0.1.3",
     "object-assign": "^3.0.0",
     "raw-body": "^2.1.2",
     "rocky": "^0.3.3",
-    "router": "^1.1.3"
+    "router": "^1.1.3",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "chai": "^3.0.0",
@@ -48,5 +51,6 @@
     "mocha": "^2.2.5",
     "sinon": "^1.15.3",
     "supertest": "^1.0.1"
-  }
+  },
+  "snyk": true
 }
